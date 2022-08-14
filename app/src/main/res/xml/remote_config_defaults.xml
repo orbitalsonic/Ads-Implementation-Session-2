@@ -20,19 +20,19 @@
 
     <entry>
         <key>priority_interstitial</key>
-        <value>1</value>
+        <value>2</value>
     </entry>
     <entry>
         <key>priority_medium_native</key>
-        <value>1</value>
+        <value>2</value>
     </entry>
     <entry>
         <key>priority_small_native</key>
-        <value>1</value>
+        <value>2</value>
     </entry>
     <entry>
         <key>priority_small_banner</key>
-        <value>1</value>
+        <value>2</value>
     </entry>
 
 </defaultsMap>

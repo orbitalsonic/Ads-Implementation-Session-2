@@ -44,9 +44,10 @@ class SplashActivity : AppCompatActivity() {
     private lateinit var fbBannerAds: FbBannerAds
     private lateinit var admobBannerAds: AdmobBannerAds
 
-    private var mHandler = Handler(Looper.getMainLooper())
+    private val mHandler = Handler(Looper.getMainLooper())
+    private val adsRunner = Runnable { checkAdvertisement() }
+
     private var isNativeLoadedOrFailed = false
-    private var isPause = false
     private var mCounter: Int = 0
 
     private lateinit var remoteConfig: FirebaseRemoteConfig
@@ -164,44 +165,43 @@ class SplashActivity : AppCompatActivity() {
 
     }
 
-    private fun handlerTrigger() {
+    private fun checkAdvertisement() {
 
-        if (!isPause) {
-            if (mCounter < 12) {
-                mHandler.postDelayed({
-                    try {
-                        mCounter++
-                        if ( isNativeLoadedOrFailed) {
-                            isPause = true
-                            binding.btnNext.visibility = View.VISIBLE
-                            binding.loadingProgress.visibility = View.GONE
-                        } else {
-                            handlerTrigger()
+        if (mCounter < 12) {
+            try {
+                mCounter++
+                if ( isNativeLoadedOrFailed) {
+                    binding.btnNext.visibility = View.VISIBLE
+                    binding.loadingProgress.visibility = View.GONE
+                } else {
+                    checkAdvertisement()
 
-                        }
+                }
 
-                    } catch (e: Exception) {
+            } catch (e: Exception) {
 
-                    }
-                }, 1000)
-            } else {
-                binding.btnNext.visibility = View.VISIBLE
-                binding.loadingProgress.visibility = View.GONE
             }
 
+            mHandler.removeCallbacks { adsRunner }
+            mHandler.postDelayed(
+                adsRunner,
+                (1000)
+            )
+        } else {
+            binding.btnNext.visibility = View.VISIBLE
+            binding.loadingProgress.visibility = View.GONE
         }
 
     }
 
-    override fun onPause() {
-        super.onPause()
-        isPause = true
+    override fun onStop() {
+        super.onStop()
+        mHandler.removeCallbacks(adsRunner)
     }
 
     override fun onResume() {
         super.onResume()
-        isPause = false
-        handlerTrigger()
+        mHandler.post(adsRunner)
     }
 
     private fun updateRemoteValues() {
