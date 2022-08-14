@@ -18,8 +18,6 @@ class AdmobInterstitialAds(activity: Activity) {
     private var mInterstitialAd: InterstitialAd? = null
     private var adRequest: AdRequest = AdRequest.Builder().build()
 
-    private var interstitialOnLoadCallBack: InterstitialOnLoadCallBack? = null
-    private var interstitialOnShowCallBack: InterstitialOnShowCallBack? = null
     private var isLoadingAd = false
 
 
