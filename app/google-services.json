@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "688202145716",
+    "project_id": "ads-implementation-3f226",
+    "storage_bucket": "ads-implementation-3f226.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688202145716:android:6341e3acdba6a025f4dce1",
+        "android_client_info": {
+          "package_name": "com.orbitalsonic.adsimplementationsession"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688202145716-047naiuqtbdadbsvgh3h71creqr61p41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKWKZWbfF5BMAmdx0LyUSRXpDf0x9CXBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688202145716-047naiuqtbdadbsvgh3h71creqr61p41.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

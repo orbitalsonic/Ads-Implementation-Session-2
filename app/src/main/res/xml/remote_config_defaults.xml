@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>is_setting_interstitial_active</key>
+        <value>true</value>
+    </entry>
+  <entry>
+        <key>is_splash_native_active</key>
+        <value>true</value>
+    </entry>
+  <entry>
+        <key>is_main_native_active</key>
+        <value>true</value>
+    </entry>
+  <entry>
+        <key>is_main_banner_active</key>
+        <value>true</value>
+    </entry>
+  <entry>
+        <key>is_main_banner_or_native</key>
+        <value>false</value>
+    </entry>
+  <entry>
+        <key>priority_setting_interstitial</key>
+        <value>1</value>
+    </entry>
+  <entry>
+        <key>priority_splash_native</key>
+        <value>1</value>
+    </entry>
+  <entry>
+        <key>priority_main_native</key>
+        <value>1</value>
+    </entry>
+  <entry>
+        <key>priority_main_banner</key>
+        <value>1</value>
+    </entry>
+  <entry>
+        <key>fb_setting_interstitial_ids</key>
+        <value>1108519166746477_1108520350079692</value>
+    </entry>
+  <entry>
+        <key>admob_setting_interstitial_ids</key>
+        <value>ca-app-pub-9049807050760021/9671477206</value>
+    </entry>
+
+</defaultsMap>
