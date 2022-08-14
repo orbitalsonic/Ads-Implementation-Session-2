@@ -21,6 +21,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -43,6 +44,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 findNavControllerSafely()?.navigate(action)
             }
         }
+
         binding.btnSimpleInter.setSafeOnClickListener {
             if (findNavControllerSafely()?.currentDestination?.id == R.id.homeFragment){
                 val action = HomeFragmentDirections.actionHomeFragmentToSampleInterFragment()

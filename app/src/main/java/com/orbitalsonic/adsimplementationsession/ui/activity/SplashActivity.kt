@@ -100,7 +100,6 @@ class SplashActivity : AppCompatActivity() {
                         override fun onAdClicked() {}
 
                         override fun onLoggingImpression() {
-                            isNativeLoadedOrFailed = true
                         }
 
                         override fun onMediaDownloaded() {}
@@ -131,9 +130,7 @@ class SplashActivity : AppCompatActivity() {
                         }
 
                     })
-            }
-
-            else -> {
+            }else -> {
                 isNativeLoadedOrFailed = true
                 binding.adsContainerLayout.visibility = View.GONE
             }
@@ -170,12 +167,9 @@ class SplashActivity : AppCompatActivity() {
         if (mCounter < 12) {
             try {
                 mCounter++
-                if ( isNativeLoadedOrFailed) {
+                if (isNativeLoadedOrFailed) {
                     binding.btnNext.visibility = View.VISIBLE
                     binding.loadingProgress.visibility = View.GONE
-                } else {
-                    checkAdvertisement()
-
                 }
 
             } catch (e: Exception) {

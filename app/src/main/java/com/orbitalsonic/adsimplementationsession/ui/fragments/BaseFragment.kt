@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 
+
 open class BaseFragment<T : ViewDataBinding> : Fragment() {
 
     var hasInitializedRootView = false

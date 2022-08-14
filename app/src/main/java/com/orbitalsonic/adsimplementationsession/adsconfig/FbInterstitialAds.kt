@@ -2,11 +2,11 @@ package com.orbitalsonic.adsimplementationsession.adsconfig
 
 import android.app.Activity
 import android.util.Log
-import com.orbitalsonic.adsimplementationsession.adsconfig.callback.FbInterstitialOnCallBack
 import com.facebook.ads.Ad
 import com.facebook.ads.AdError
 import com.facebook.ads.InterstitialAd
 import com.facebook.ads.InterstitialAdListener
+import com.orbitalsonic.adsimplementationsession.adsconfig.callback.FbInterstitialOnCallBack
 import com.orbitalsonic.adsimplementationsession.helpers.utils.GeneralUtils.AD_TAG
 
 class FbInterstitialAds(activity: Activity) {
