@@ -157,10 +157,8 @@ class FbInterstitialAds(activity: Activity) {
     }
 
     fun showInterstitialAds(){
-        mInterstitialAd?.let {
-            if (it.isAdLoaded){
-                it.show()
-            }
+        if (isInterstitialAdsLoaded()){
+            mInterstitialAd?.show()
         }
     }
 
